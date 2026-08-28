@@ -6,8 +6,7 @@ class Solution {
         }
         ArrayList<Integer>lst=new ArrayList<>();
         for(int i:nums){
-            if(map.get(i)>1 || map.containsKey(i+1) || map.containsKey(i-1))continue;
-            else lst.add(i);
+            if(map.get(i)==1 && !map.containsKey(i+1) && !map.containsKey(i-1))lst.add(i);
         }
         return lst;
     }
